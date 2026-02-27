@@ -7,11 +7,20 @@ class SvelteNext < Formula
   license "MIT"
 
   def install
-    bin.install "svelte-next"
-    prefix.install "lib", "src"
+    # Install the main script and all supporting files into libexec
+    # so they stay together and script_dir resolves correctly
+    libexec.install "svelte-next", "lib", "src"
+
+    # Write a thin wrapper in bin/ that sets SVELTE_NEXT_LIBEXEC so the
+    # script does not need to resolve symlinks to find lib/ and src/
+    (bin/"svelte-next").write <<~EOS
+      #!/usr/bin/env bash
+      export SVELTE_NEXT_LIBEXEC="#{libexec}"
+      exec "#{libexec}/svelte-next" "$@"
+    EOS
   end
 
   test do
-    assert_match "version", shell_output("#{bin}/svelte-next --version")
+    assert_match version.to_s, shell_output("#{bin}/svelte-next --version")
   end
 end
