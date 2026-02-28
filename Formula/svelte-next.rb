@@ -1,8 +1,8 @@
 class SvelteNext < Formula
   desc "Automates updating Svelte versions in project directories"
   homepage "https://github.com/shinokada/svelte-next"
-  url "https://github.com/shinokada/svelte-next/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "b01ab0764dea08a80b26331704e8916455d60d9dec8d1559e8294a910ba97fe8"
+  url "https://github.com/shinokada/svelte-next/archive/refs/tags/v0.6.2.tar.gz"
+  sha256 "de65e5ef2f1f464b320dc79af129b2e18d9eb1207af825c73c55474050306b37"
   license "MIT"
 
   def install
