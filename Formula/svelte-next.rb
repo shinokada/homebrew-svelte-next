@@ -5,21 +5,21 @@
 class SvelteNext < Formula
   desc "Update Svelte 5+ projects across multiple directories"
   homepage "https://github.com/shinokada/svelte-next"
-  version "1.0.1"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.1/svelte-next_1.0.1_darwin_amd64.tar.gz"
-      sha256 "ccb92ec5de840aff2283a53da333ce42a86546828ac0a9dfee649789a50f8e53"
+      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.3/svelte-next_1.0.3_darwin_amd64.tar.gz"
+      sha256 "7c85856426d2b1a7c79d5c8a604bb52682f1e5bdf9b7b883ee4f91fb1ece24f0"
 
       define_method(:install) do
         bin.install "svelte-next"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.1/svelte-next_1.0.1_darwin_arm64.tar.gz"
-      sha256 "3dd4557c66c8e9ab3e76a8d97e2cfaedb21c9944d2793e14cf51228a27c46bf0"
+      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.3/svelte-next_1.0.3_darwin_arm64.tar.gz"
+      sha256 "d57b8e69cf9028d79d1efee0459cdd0bddfab0382c95b5f11089740c77ff675f"
 
       define_method(:install) do
         bin.install "svelte-next"
@@ -29,15 +29,15 @@ class SvelteNext < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.1/svelte-next_1.0.1_linux_amd64.tar.gz"
-      sha256 "7629c71ddb96e0b5ac10ab45f490905deb590d5cd91a4879c0c931844ab425eb"
+      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.3/svelte-next_1.0.3_linux_amd64.tar.gz"
+      sha256 "16143bef4560c69558ce4578ae146de59db6043cf32dfc06d12bbbabcf437801"
       define_method(:install) do
         bin.install "svelte-next"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.1/svelte-next_1.0.1_linux_arm64.tar.gz"
-      sha256 "ed7c923499819f91f9deb10a1d64a3d5a5f8a0948e3de23a59acf5c10d257463"
+      url "https://github.com/shinokada/svelte-next/releases/download/v1.0.3/svelte-next_1.0.3_linux_arm64.tar.gz"
+      sha256 "8e21099454e8e81050543443af6c9b00d2ff94f08f8544e1f8c431137cc40f2e"
       define_method(:install) do
         bin.install "svelte-next"
       end
